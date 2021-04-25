@@ -46,8 +46,6 @@ public class ItemAdapter extends BaseAdapter {
             holder=(ItemViewHolder) convertView.getTag();
         }
         holder.nameTv.setText(itemList.get(position).getName());
-
-
         return convertView;
     }
 

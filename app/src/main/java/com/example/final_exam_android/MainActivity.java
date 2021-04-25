@@ -68,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData(){
         itemList.add(new Item());
+        itemList.add(new Item());
+        itemList.add(new Item());
+        itemList.add(new Item());
+
     }
 
     private void getTempList(int position){
