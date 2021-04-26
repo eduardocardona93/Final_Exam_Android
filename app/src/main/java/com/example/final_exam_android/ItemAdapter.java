@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ItemAdapter extends BaseAdapter {
-    ArrayList<Item> itemList = new ArrayList<>();
+public class    ItemAdapter extends BaseAdapter {
+    ArrayList<PointOfInterest> itemList = new ArrayList<>();
     private LayoutInflater inflater;
 
 
-    public ItemAdapter(Context context, ArrayList<Item> bookList) {
+    public ItemAdapter(Context context, ArrayList<PointOfInterest> bookList) {
         this.itemList = bookList;
         inflater = LayoutInflater.from(context);
     }
