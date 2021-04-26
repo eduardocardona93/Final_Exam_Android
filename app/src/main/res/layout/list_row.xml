@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nameTv"
-        android:layout_width="385dp"
-        android:layout_height="81dp"
-        android:layout_weight="1"
-        android:text="TextView" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/poiNameTv"
+            android:layout_width="228dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:text="The Butchart Gardens"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/poiImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/poiImg"
+            android:layout_width="153dp"
+            android:layout_height="92dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/butchart" />
+
+        <TextView
+            android:id="@+id/poiPriceTv"
+            android:layout_width="71dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="9dp"
+            android:gravity="center|center_horizontal"
+            android:text="$ 000.00"
+            app:layout_constraintStart_toEndOf="@+id/poiImg"
+            app:layout_constraintTop_toBottomOf="@+id/poiNameTv" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/poiImg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

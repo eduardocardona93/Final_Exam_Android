@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,17 +40,22 @@ public class    ItemAdapter extends BaseAdapter {
         if(convertView==null) {
             convertView = inflater.inflate(R.layout.list_row, null);
             holder = new ItemViewHolder();
-            holder.nameTv = convertView.findViewById(R.id.nameTv);
+            holder.poiNameTv = convertView.findViewById(R.id.poiNameTv);
+            holder.poiPriceTv = convertView.findViewById(R.id.poiPriceTv);
+            holder.poiImg = convertView.findViewById(R.id.poiImg);
 
             convertView.setTag(holder);
         }else{
             holder=(ItemViewHolder) convertView.getTag();
         }
-        holder.nameTv.setText(itemList.get(position).getName());
+        holder.poiNameTv.setText(itemList.get(position).getName());
+        holder.poiPriceTv.setText("$ " + String.format("%.2f", itemList.get(position).getVisitPrice()) );
+        holder.poiImg.setImageResource(itemList.get(position).getImageId());
         return convertView;
     }
 
     private class ItemViewHolder{
-        private TextView nameTv;
+        private TextView poiNameTv, poiPriceTv;
+        private ImageView poiImg;
     }
 }

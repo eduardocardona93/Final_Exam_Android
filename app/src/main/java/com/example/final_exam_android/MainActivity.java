@@ -85,20 +85,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData(){
         countriesList.add(new Country("Canada","Ottawa", getResources().getIdentifier("canada","mipmap",getPackageName())));
-        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"Niagara falls ",2,100.0));
-        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"CN Tower",2,30.0));
-        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"The Butchart Gardens",2,30.0));
-        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"Notre-Dame Basilica",2,50.0));
+        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"Niagara falls ",getResources().getIdentifier("niagara","mipmap",getPackageName()),100.0));
+        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"CN Tower",getResources().getIdentifier("cntower","mipmap",getPackageName()),30.0));
+        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"The Butchart Gardens",getResources().getIdentifier("butchart","mipmap",getPackageName()),30.0));
+        poiList.add(new PointOfInterest(countriesList.get(0).getName(),"Notre-Dame Basilica",getResources().getIdentifier("notredame","mipmap",getPackageName()),50.0));
 
         countriesList.add(new Country("United States","Washington", getResources().getIdentifier("us","mipmap",getPackageName())));
-        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"The Statue of Liberty",2,90.0));
-        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"The White House",2,60.0));
-        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"Times Square",2,75.0));
+        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"The Statue of Liberty",getResources().getIdentifier("statueliberty","mipmap",getPackageName()),90.0));
+        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"The White House",getResources().getIdentifier("whitehouse","mipmap",getPackageName()),60.0));
+        poiList.add(new PointOfInterest(countriesList.get(1).getName(),"Times Square",getResources().getIdentifier("timesquare","mipmap",getPackageName()),75.0));
 
-        countriesList.add(new Country("England","London", getResources().getIdentifier("england","mipmap",getPackageName())));
-        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Big Ben",2,30.0));
-        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Westminster Abbey",2,25.0));
-        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Hyde Park",2,15.0));
+        countriesList.add(new Country("England","London", getResources().getIdentifier("engla   nd","mipmap",getPackageName())));
+        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Big Ben",getResources().getIdentifier("bigben","mipmap",getPackageName()),30.0));
+        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Westminster Abbey",getResources().getIdentifier("westminster","mipmap",getPackageName()),25.0));
+        poiList.add(new PointOfInterest(countriesList.get(2).getName(),"Hyde Park",getResources().getIdentifier("hyde","mipmap",getPackageName()),15.0));
 
         countriesNamesList.add(countriesList.get(0).getName());
         countriesNamesList.add(countriesList.get(1).getName());
