@@ -10,13 +10,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class    ItemAdapter extends BaseAdapter {
+public class ItemAdapter extends BaseAdapter {
+
     ArrayList<PointOfInterest> itemList = new ArrayList<>();
     private LayoutInflater inflater;
 
-
-    public ItemAdapter(Context context, ArrayList<PointOfInterest> bookList) {
-        this.itemList = bookList;
+    // class constructor
+    public ItemAdapter(Context context, ArrayList<PointOfInterest> itemList) {
+        this.itemList = itemList;
         inflater = LayoutInflater.from(context);
     }
 
@@ -40,6 +41,7 @@ public class    ItemAdapter extends BaseAdapter {
         if(convertView==null) {
             convertView = inflater.inflate(R.layout.list_row, null);
             holder = new ItemViewHolder();
+            // id assignation for the row elements
             holder.poiNameTv = convertView.findViewById(R.id.poiNameTv);
             holder.poiPriceTv = convertView.findViewById(R.id.poiPriceTv);
             holder.poiImg = convertView.findViewById(R.id.poiImg);
@@ -48,9 +50,9 @@ public class    ItemAdapter extends BaseAdapter {
         }else{
             holder=(ItemViewHolder) convertView.getTag();
         }
-        holder.poiNameTv.setText(itemList.get(position).getName());
-        holder.poiPriceTv.setText("$ " + String.format("%.2f", itemList.get(position).getVisitPrice()) );
-        holder.poiImg.setImageResource(itemList.get(position).getImageId());
+        holder.poiNameTv.setText(itemList.get(position).getName()); // sets the poi name into the textview
+        holder.poiPriceTv.setText("$ " + String.format("%.2f", itemList.get(position).getVisitPrice()) );  // sets the poi price into the textview
+        holder.poiImg.setImageResource(itemList.get(position).getImageId());  // sets the poi image into the imageview
         return convertView;
     }
 
